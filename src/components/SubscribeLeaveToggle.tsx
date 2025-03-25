@@ -48,12 +48,12 @@ const SubscribeLeaveToggle = ({
     onSuccess: () => {
       startTransition(() => {
         // Refresh the current route and fetch new data from the server without
-        // losing client-side browser or React state.
+        // losing client-side browser or users current state.
         router.refresh()
       })
       toast({
         title: 'Subscribed!',
-        description: `You are now subscribed to r/${subredditName}`,
+        description: `You are now subscribed to the community r/${subredditName}`,
       })
     },
   })

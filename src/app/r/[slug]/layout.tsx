@@ -10,8 +10,8 @@ import { notFound } from 'next/navigation'
 import { ReactNode } from 'react'
 
 export const metadata: Metadata = {
-  title: 'Breadit',
-  description: 'A Reddit clone built with Next.js and TypeScript.',
+  title: 'CrossPost',
+  description: 'A communtiy platform built with Next.js and TypeScript.',
 }
 
 const Layout = async ({
