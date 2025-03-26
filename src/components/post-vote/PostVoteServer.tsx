@@ -9,6 +9,7 @@ interface PostVoteServerProps {
   initialVote?: Vote['type'] | null
   getData?: () => Promise<(Post & { votes: Vote[] }) | null>
 }
+const wait = (ms: number) => new Promise((res) => setTimeout(res, ms))
 
 /**
  * We split the PostVotes into a client and a server component to allow for dynamic data
@@ -29,6 +30,7 @@ const PostVoteServer = async ({
   let _currentVote: Vote['type'] | null | undefined = undefined
 
   if (getData) {
+    await wait(200)
     // fetch data in component
     const post = await getData()
     if (!post) return notFound()
