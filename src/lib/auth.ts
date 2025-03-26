@@ -20,7 +20,7 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   callbacks: {
-    async session({ token, session }) {
+    async session({ session, token }) {
       if (token) {
         session.user.id = token.id
         session.user.name = token.name
@@ -63,9 +63,10 @@ export const authOptions: NextAuthOptions = {
         username: dbUser.username,
       }
     },
-    redirect() {
-      return '/'
-    },
+    redirect({ url, baseUrl }) {
+      return url.startsWith(baseUrl) ? url : baseUrl
+    }
+    ,
   },
 }
 
