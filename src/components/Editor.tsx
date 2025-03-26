@@ -129,7 +129,7 @@ export const Editor: React.FC<EditorProps> = ({ subredditId }) => {
 
   useEffect(() => {
     if (Object.keys(errors).length) {
-      for (const [_key, value] of Object.entries(errors)) {
+      for (const [_, value] of Object.entries(errors)) {
         value
         toast({
           title: 'Something went wrong.',
