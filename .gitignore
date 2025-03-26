@@ -1,36 +1,35 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
+#files and directories should be ignored by Git when tracking changes.
+# 1.dependencies
 /node_modules
 /.pnp
 .pnp.js
 
-# testing
+# 2.testing
 /coverage
 
-# next.js
+# 3.next.js
 /.next/
 /out/
 
-# production
+# 4.production
 /build
 
-# misc
+# 5.misc
 .DS_Store
 *.pem
 
-# debug
+# 6.debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
+# 7.local env files
 .env*.local
 .env
 
-# vercel
+# 8.vercel
 .vercel
 
-# typescript
+# 9.typescript
 *.tsbuildinfo
 next-env.d.ts
