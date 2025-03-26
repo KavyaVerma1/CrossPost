@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Icons } from './Icons'
 import { buttonVariants } from './ui/Button'
 import { UserAccountNav } from './UserAccountNav'
-import SearchBar from './SearchBar'
+//import SearchBar from './SearchBar'
 
 const Navbar = async () => {
   const session = await getServerSession(authOptions)
@@ -14,7 +14,7 @@ const Navbar = async () => {
         {/* logo */}
         <Link href='/' className='flex gap-2 items-center'>
           <Icons.logo className='h-8 w-8 sm:h-6 sm:w-6' />
-          <p className='hidden text-zinc-700 text-sm font-medium md:block'>CrossPost</p>
+          <p className='hidden text-zinc-700 text-sm font-medium md:block'>DailyToast</p>
         </Link>
 
         {/* search bar */}
